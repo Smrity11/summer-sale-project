@@ -16,7 +16,6 @@
         }
     .search-button {
          padding: 8px 12px;
-         border-radius: 0 4px 4px 0;
 }
 
     </style>
@@ -59,7 +58,7 @@
         <!-- section 2 -->
         <section class="w-max-screen-xl my-10 mx-auto  px-8 md:px-16 lg:px-24 grid justify-center" >
             <!-- card section with calculate total -->
-           <div class="static lg:flex gap-2">
+           <div class="static lg:flex gap-3">
       <!-- 6 card container -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
                 <!-- card 1 -->
@@ -171,13 +170,40 @@
                 <div class="shadow-lg rounded-md p-4 w-auto mt-3">
                     <h1>Have coupon?</h1>
                     <div class="flex items-center">
-                        <input type="text" class="p-[8px] border-[1px] w-[180px] rounded-lg" placeholder="Search...">
-                        <button class="search-button  text-white border-none bg-pinkcolor cursor-pointer">Search</button>
+                        <input type="text" class="p-[8px] border-[1px] w-[180px] rounded-l-lg outline-none" placeholder="Search...">
+                        <button class="search-button  text-white border-none bg-pinkcolor cursor-pointer rounded-r-lg">Search</button>
                       </div>
                       
                 </div>
                 <!-- total price div -->
-                <div></div>
+                <div class="shadow-lg rounded-md p-4 w-auto mt-3 h-auto ">
+                    <!-- product name div -->
+                    <div id="product-name-show" class="border-b-2">
+
+                    </div>
+                    <!-- product price div -->
+                    <div class="space-y-3 my-4 border-b-2 py-4">
+                        <p class="font-bold">Total price: <span class="font-normal">0TK</span></p>
+                            <p class="font-bold">Discount : <span class="font-normal">0TK</span></p>
+                            <p class="font-bold ">Total: <span class="font-normal ">0 TK</span></p>
+                    </div>
+                    <!-- purchase button -->
+                    <div class=" mx-auto text-center">
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn bg-pinkcolor text-white px-9  " onclick="my_modal_1.showModal()">Make Purchase</button>
+                    <dialog id="my_modal_1" class="modal">
+                         <form method="dialog" class="modal-box grid justify-center mx-auto">
+                            <img class="ml-8" src="images/congo.png" alt="">
+                             <h3 class="font-bold text-lg">Congratulations</h3>
+                             <p class="py-4">Your Purchase the product</p>
+          <div class="modal-action justify-center">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn bg-pinkcolor text-white px-9 ">Go Home</button>
+    </div>
+  </form>
+</dialog>
+                    </div>
+                </div>
             </div>
            </div>
         </section>
