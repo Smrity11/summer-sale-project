@@ -14,9 +14,7 @@
         .font-family{
             font-family: 'Work Sans', sans-serif;
         }
-    .search-button {
-         padding: 8px 12px;
-}
+   
 
     </style>
     <!-- add custom color -->
@@ -44,12 +42,12 @@
         <header class="w-max-screen-xl mx-auto  ">
             <div class="hero min-h-screen bg-bgcolor  px-8 md:px-16 lg:px-32">
                 <div class="hero-content flex-col lg:flex-row-reverse lg:gap-14">
-                  <img src="/images//Summer 1.png" class="max-w-sm lg:max-w-lg " />
+                  <img src="/images//Summer 1.png" class="min-w-xs md:min-w-sm lg:max-w-lg " />
                   <div class="justify-center text-center space-y-4">
                     <h3 class="text-xl font-semibold">---SALE FEVER---</h3>
-                    <h1 class="w-[370px] text-[37px] font-bold text-black leading-snug">Purchase TK 200 or above & get <span class="text-pinkcolor">20% off</span></h1>
-                    <p class="py-6 inline">Use Promo Code</p>
-                    <button class="rounded-lg bg-pinkcolor text-white px-8 py-[6px] ml-4">SELL200</button>
+                    <h1 class="lg:w-[370px] text-[30px] lg:text-[37px] font-bold text-black leading-snug pb-6">Purchase TK 200 or above & get <span class="text-pinkcolor">20% off</span></h1>
+                    <p class=" py-6 inline">Use Promo Code</p>
+                    <div class="inline rounded-lg bg-pinkcolor text-white px-8 py-[6px] ml-4 cursor-text">SELL200</d>
                   </div>
                 </div>
               </div>
@@ -60,9 +58,11 @@
             <!-- card section with calculate total -->
            <div class="static lg:flex gap-3">
       <!-- 6 card container -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+            <div class="grid">
+              <h1 class=" text-3xl font-bold">Kitchenware</h1>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto">
                 <!-- card 1 -->
-                <div class="card w-max bg-base-100 shadow-xl ">
+                <div onclick="clickCard(this)" id="card1-all" class="card w-max bg-base-100 shadow-xl ">
                     <figure class="px-4 py-4">
                       <img src="/images//prod1.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-12 py-6" />
                     </figure>
@@ -74,104 +74,112 @@
                             <span class="text-star">&#9733;</span>
                             <span class="text-star">&#9733;</span>
                           </div>
-                      <h2 class="card-title mt-1">K. Accessories</h2>
+                      <h2 id="card1-name" class="card-title mt-1">K. Accessories</h2>
                       <p class="text-sm mt-[-8px]">39.00 TK</p>
                     </div>
                   </div>
    <!-- card 2    -->
-                <div class="card w-max bg-base-100 shadow-xl ">
+                <div onclick="clickCard(this)" id="card2-all" class="card w-max bg-base-100 shadow-xl ">
                     <figure class="px-4 py-4">
                       <img src="/images//prod2.png" alt="Shoes" class="w-[210px] rounded-xl bg-cardpicbg px-12 py-8" />
                     </figure>
                     <div class="card-body items-center text-center mt-[-35px] leading-3">
-                        <div class=" star-rating text-[21px]">
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                          </div>
-                      <h2 class="card-title mt-1">K. Accessories</h2>
-                      <p class="text-sm mt-[-8px]">39.00 TK</p>
+                      <div class=" star-rating text-[21px]">
+                        <span class="text-star">&#9733;</span>
+                        <span class="text-star">&#9733;</span>
+                        <span class="text-star">&#9733;</span>
+                        <span class="text-star">&#9733;</span>
+                        <span class="text-star">&#9733;</span>
+                      </div>
+                      <h2 id="card2-name" class="card-title mt-1">B. Accessories</h2>
+                      <p class="text-sm mt-[-8px]">25.00 TK</p>
                     </div>
                   </div>
     <!-- card 3   -->
-                <div class="card w-max bg-base-100 shadow-xl ">
+                <div onclick="clickCard(this)" id="card3-all" class="card w-max bg-base-100 shadow-xl ">
                     <figure class="px-4 py-4">
                       <img src="/images/prod3.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-12 py-8 w-[210px]" />
                     </figure>
                     <div class="card-body items-center text-center mt-[-35px] leading-3">
-                        <div class=" star-rating text-[21px]">
+                          <div class=" star-rating text-[21px]">
                             <span class="text-staryellow">&#9733;</span>
                             <span class="text-staryellow">&#9733;</span>
                             <span class="text-staryellow">&#9733;</span>
                             <span class="text-star">&#9733;</span>
                             <span class="text-star">&#9733;</span>
                           </div>
-                      <h2 class="card-title mt-1">K. Accessories</h2>
-                      <p class="text-sm mt-[-8px]">39.00 TK</p>
+                      <h2 id="card3-name" class="card-title mt-1">Home Cooker</h2>
+                      <p class="text-sm mt-[-8px]">49.00 TK</p>
                     </div>
                   </div>
-   <!-- card 4  -->
-                <div class="card w-max bg-base-100 shadow-xl ">
-                    <figure class="px-4 py-4">
-                      <img src="/images//prod4.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-12 py-10 w-[210px] " />
-                    </figure>
-                    <div class="card-body items-center text-center mt-[-35px] leading-3">
-                        <div class=" star-rating text-[21px]">
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                          </div>
-                      <h2 class="card-title mt-1">K. Accessories</h2>
-                      <p class="text-sm mt-[-8px]">39.00 TK</p>
-                    </div>
+                </div>
+              <!-- next 3 card -->
+                  <h1 class="mt-10 text-3xl font-bold">Sportswear</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto">
+                   <!-- card 4  -->
+                <div onclick="clickCard(this)" id="card4-all" class="card w-max bg-base-100 shadow-xl ">
+                  <figure class="px-4 py-4">
+                    <img src="/images//prod4.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-12 py-10 w-[210px] " />
+                  </figure>
+                  <div class="card-body items-center text-center mt-[-35px] leading-3">
+                      <div class=" star-rating text-[21px]">
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-star">&#9733;</span>
+                          <span class="text-star">&#9733;</span>
+                          <span class="text-star">&#9733;</span>
+                        </div>
+                    <h2 id="card4-name" class="card-title mt-1">Sports Back Cap</h2>
+                    <p class="text-sm mt-[-8px]">49.00 TK</p>
                   </div>
-      <!-- card 5  -->
-                <div class="card w-max bg-base-100 shadow-xl ">
-                    <figure class="px-4 py-4">
-                      <img src="/images//prod5.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-12 py-4 w-[210px] h-[180px]" />
-                    </figure>
-                    <div class="card-body items-center text-center mt-[-35px] leading-3">
-                        <div class=" star-rating text-[21px]">
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                          </div>
-                      <h2 class="card-title mt-1">K. Accessories</h2>
-                      <p class="text-sm mt-[-8px]">39.00 TK</p>
-                    </div>
+                </div>
+    <!-- card 5  -->
+              <div onclick="clickCard(this)" id="card5-all" class="card w-max bg-base-100 shadow-xl ">
+                  <figure class="px-4 py-4">
+                    <img src="/images//prod5.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-12 py-4 w-[210px] h-[180px]" />
+                  </figure>
+                  <div class="card-body items-center text-center mt-[-35px] leading-3">
+                      <div class=" star-rating text-[21px]">
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-star">&#9733;</span>
+                        </div>
+                    <h2 id="card5-name" class="card-title mt-1">Full Jersey Set</h2>
+                    <p class="text-sm mt-[-8px]">69.00 TK</p>
                   </div>
+                </div>
 <!-- card 6 -->
-                <div class="card w-max bg-base-100 shadow-xl ">
-                    <figure class="px-4 py-4">
-                      <img src="/images//prod6.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-10 py-7 w-[210px]" />
-                    </figure>
-                    <div class="card-body items-center text-center mt-[-35px] leading-3">
-                        <div class=" star-rating text-[21px]">
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-staryellow">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                            <span class="text-star">&#9733;</span>
-                          </div>
-                      <h2 class="card-title mt-1">K. Accessories</h2>
-                      <p class="text-sm mt-[-8px]">39.00 TK</p>
-                    </div>
+              <div onclick="clickCard(this)" id="card6-all" class="card w-max bg-base-100 shadow-xl ">
+                  <figure class="px-4 py-4">
+                    <img src="/images//prod6.png" alt="Shoes" class="rounded-xl bg-cardpicbg px-10 py-7 w-[210px]" />
+                  </figure>
+                  <div class="card-body items-center text-center mt-[-35px] leading-3">
+                      <div class=" star-rating text-[21px]">
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-staryellow">&#9733;</span>
+                          <span class="text-star">&#9733;</span>
+                          <span class="text-star">&#9733;</span>
+                        </div>
+                    <h2 id="card6-name" class="card-title mt-1">Sports cates</h2>
+                    <p class="text-sm mt-[-8px]">159.00 TK</p>
                   </div>
+                </div>
+                </div>
             </div>
+            
             <!-- total section -->
             <div>
                 <!-- cuppon div -->
-                <div class="shadow-lg rounded-md p-4 w-auto mt-3">
-                    <h1>Have coupon?</h1>
+                <div class="shadow-lg rounded-md p-4 w-auto mt-12">
+                    <h1 class="text-lg font-bold">Have coupon?</h1>
                     <div class="flex items-center">
-                        <input type="text" class="p-[8px] border-[1px] w-[180px] rounded-l-lg outline-none" placeholder="Search...">
-                        <button class="search-button  text-white border-none bg-pinkcolor cursor-pointer rounded-r-lg">Search</button>
+                        <input id="cuppon-input" type="text" class="p-[9px] border-[2px] w-[180px] rounded-l-lg outline-none" placeholder="Cupon Code">
+                        <button id="cuppon-btn" class=" btn text-white border-none bg-pinkcolor cursor-pointer rounded-r-lg  w-[100px]" disabled>Apply</button>
+                        
+                       
                       </div>
                       
                 </div>
@@ -183,22 +191,23 @@
                     </div>
                     <!-- product price div -->
                     <div class="space-y-3 my-4 border-b-2 py-4">
-                        <p class="font-bold">Total price: <span class="font-normal">0TK</span></p>
-                            <p class="font-bold">Discount : <span class="font-normal">0TK</span></p>
-                            <p class="font-bold ">Total: <span class="font-normal ">0 TK</span></p>
+                        <p class="font-bold">Total price: <span class="font-normal" id="card-price">0</span>TK</p>
+                            <p class="font-bold">Discount : <span class="font-normal" id="card-discount">0</span>TK</p>
+                            <p class="font-bold ">Total: <span class="font-normal" id="card-total-price">0 </span>TK</p>
+                            
                     </div>
                     <!-- purchase button -->
                     <div class=" mx-auto text-center">
                         <!-- Open the modal using ID.showModal() method -->
-                        <button class="btn bg-pinkcolor text-white px-9  " onclick="my_modal_1.showModal()">Make Purchase</button>
+                        <button id="purchase-btn" class="btn bg-pinkcolor text-white px-9  " disabled="my_modal_1.showModal()">Make Purchase</button>
                     <dialog id="my_modal_1" class="modal">
                          <form method="dialog" class="modal-box grid justify-center mx-auto">
                             <img class="ml-8" src="images/congo.png" alt="">
                              <h3 class="font-bold text-lg">Congratulations</h3>
                              <p class="py-4">Your Purchase the product</p>
-          <div class="modal-action justify-center">
+          <div class=" justify-center">
       <!-- if there is a button in form, it will close the modal -->
-      <button class="btn bg-pinkcolor text-white px-9 ">Go Home</button>
+      <button id="modal-go-home-btn" class="btn bg-pinkcolor text-white px-9 ">Go Home</button>
     </div>
   </form>
 </dialog>
@@ -208,5 +217,6 @@
            </div>
         </section>
     </main>
+    <script src="summer.js"></script>
 </body>
 </html>
